@@ -1,0 +1,1 @@
+"use strict";const site={init:function(){}};site.init();

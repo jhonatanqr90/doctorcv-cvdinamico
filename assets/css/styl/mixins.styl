@@ -1,0 +1,24 @@
+// Variables
+--screen-2xs =  400px
+--screen-2xs-plus =  401px
+--screen-xs =  480px
+--screen-xs-plus =  481px
+--screen-sm =  640px
+--screen-sm-plus =  641px
+--screen-md = 768px
+--screen-md-plus = 769px
+--screen-lg = 1024px
+--screen-lg-plus = 1025px
+--screen-xl = 1280px
+--screen-xl-plus = 1281px
+--screen-2xl = 1536px
+--screen-2xl-plus = 1537px
+
+rem()
+	array = ()
+	for num in arguments
+		if num == 0 or num is a 'string' or num is a 'ident'
+			push(array, num )
+		else
+			push(array, (num/16)rem )
+	array

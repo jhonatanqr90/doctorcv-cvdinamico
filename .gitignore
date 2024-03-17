@@ -1,0 +1,5 @@
+# Ignorar todas las imágenes originales en assets/images/originales
+assets/images/originales/*
+
+# Ignorar todo el contenido en la carpeta assets/diseño
+assets/diseño/*

@@ -1,1 +1,1 @@
-"use strict";const site={init:function(){}};site.init();
+"use strict";const site=function(){const t={header:function(){const t=document.getElementById("cv");console.log(t.offsetHeight)}};return{init:function(){t.header()}}}();site.init();

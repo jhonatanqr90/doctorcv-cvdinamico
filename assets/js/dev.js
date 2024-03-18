@@ -11,7 +11,7 @@ const site = (function () {
 
     const siteFunctions = function () {
 
-        // events.header();
+        events.header();
 
     };
 
@@ -19,8 +19,8 @@ const site = (function () {
 
         header: function () {
 
-
-
+            const $cv = document.getElementById('cv')
+            console.log($cv.offsetHeight)
         },
 
     }

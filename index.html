@@ -46,9 +46,9 @@
                     <a href="tel:+511955578561" class="cv__header__link">(+511)-95557-8561</a>
                     <a href="tel:mailto:jramos@email.com" class="cv__header__link">jramos@email.com</a>
                     <div class="cv__actions__items">
-                        <img src="assets/images/play.svg" width="20" alt="" loading="lazy" />
-                        <img src="assets/images/file.svg" width="20" alt="" loading="lazy" />
-                        <img src="assets/images/image.svg" width="20" alt="" loading="lazy" />
+                        <img src="assets/images/play.svg" class="fnShowVideoDetail" width="20" alt="" loading="lazy" />
+                        <img src="assets/images/file.svg" class="fnShowFileDetail" width="20" alt="" loading="lazy" />
+                        <!-- <img src="assets/images/image.svg" width="20" alt="" loading="lazy" /> -->
                     </div>
                 </div>
                 <div class="cv__block cv__actions">
@@ -59,9 +59,9 @@
                         innovación en el servicio, combino habilidades técnicas avanzadas con una comunicación efectiva
                         para lograr resultados excepcionales.</p>
                     <div class="cv__actions__items">
-                        <img src="assets/images/play.svg" width="20" alt="" loading="lazy" />
-                        <img src="assets/images/file.svg" width="20" alt="" loading="lazy" />
-                        <img src="assets/images/image.svg" width="20" alt="" loading="lazy" />
+                        <img src="assets/images/play.svg" class="fnShowVideoDetail" width="20" alt="" loading="lazy" />
+                        <img src="assets/images/file.svg" class="fnShowFileDetail" width="20" alt="" loading="lazy" />
+                        <!-- <img src="assets/images/image.svg" width="20" alt="" loading="lazy" /> -->
                     </div>
                 </div>
                 <div class="cv__block cv__actions">
@@ -92,9 +92,9 @@
                         </ul>
                     </article>
                     <div class="cv__actions__items">
-                        <img src="assets/images/play.svg" width="20" alt="" loading="lazy" />
-                        <img src="assets/images/file.svg" width="20" alt="" loading="lazy" />
-                        <img src="assets/images/image.svg" width="20" alt="" loading="lazy" />
+                        <img src="assets/images/play.svg" class="fnShowVideoDetail" width="20" alt="" loading="lazy" />
+                        <img src="assets/images/file.svg" class="fnShowFileDetail" width="20" alt="" loading="lazy" />
+                        <!-- <img src="assets/images/image.svg" width="20" alt="" loading="lazy" /> -->
                     </div>
                 </div>
                 <div class="cv__block cv__actions">
@@ -111,9 +111,9 @@
                         </ul>
                     </article>
                     <div class="cv__actions__items">
-                        <img src="assets/images/play.svg" width="20" alt="" loading="lazy" />
-                        <img src="assets/images/file.svg" width="20" alt="" loading="lazy" />
-                        <img src="assets/images/image.svg" width="20" alt="" loading="lazy" />
+                        <img src="assets/images/play.svg" class="fnShowVideoDetail" width="20" alt="" loading="lazy" />
+                        <img src="assets/images/file.svg" class="fnShowFileDetail" width="20" alt="" loading="lazy" />
+                        <!-- <img src="assets/images/image.svg" width="20" alt="" loading="lazy" /> -->
                     </div>
                 </div>
                 <div class="cv__more"></div>
@@ -123,6 +123,52 @@
             <p class="footer__text">Powered by</p>
             <img src="assets/images/doctor-cv.png" alt="" loading="lazy">
         </footer>
+    </div>
+
+    <div id="fileDetail" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <h6 class="cv__file-detail__title">Dudas sobre acerca de mí</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">Enlaces de interés:</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/link.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/link.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/link.svg" width="18" alt="">
+                        Texto de ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="videoDetail" class="cv__video-detail">
+        <div class="cv__video-detail__back fnCloseVideoDetail"></div>
+        <div class="cv__video-detail__video">
+            <iframe id="videoDetailIframe" src="" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
     </div>
 
     <script type="module" src="assets/js/main.js"></script>

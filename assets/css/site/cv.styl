@@ -219,8 +219,163 @@
             transform translate(-50%, -50%) rotate(90deg)
         
         &:hover
-            background-color #FF3201
+            background-color var(--orange-color)
             transform rotate(90deg) scale(1.15)
 
+    &__file-detail
+        fullBox(fixed)
+        z-index 50
 
-        // 8 / 24
+        display none
+        justify-content flex-end
+
+        &.-active-
+            display flex
+        
+        &.-show-
+            .cv__file-detail__back
+                opacity 1
+            .cv__file-detail__container
+                transform translateX(0)
+
+        &__back
+            fullBox(absolute)
+            background-color rgba(0,0,0,.65)
+            opacity 0
+            transition opacity ease .25s
+        
+        &__container
+            width rem(500)
+            height 100%
+            background-color var(--white-color)
+            position relative
+            padding rem(70, 50)
+            color var(--gray-color)
+            box-shadow rem(-10, 0, 10) rgba(0,0,0,.2)
+            transform translateX(100%)
+            transition transform ease .25s
+        
+        &__close
+            box(30)
+            position absolute
+            top rem(20)
+            right rem(20)
+            cursor pointer
+            &::before, &::after
+                content ''
+                display block
+                width 100%
+                height rem(6)
+                border-radius rem(3)
+                background-color #666
+                position absolute
+                top 50%
+                left 50%
+                transition background-color ease .25s
+            &::before
+                transform translate(-50%, -50%) rotate(-45deg)
+            &::after
+                transform translate(-50%, -50%) rotate(45deg)
+            &:hover
+                &::before, &::after
+                    background-color var(--orange-color)
+        
+        &__title
+            font-size rem(26)
+            font-weight 900
+            text-transform uppercase
+            margin-bottom rem(25)
+            color #666
+        
+        &__text, &__list
+            strong
+                font-weight 600
+                color #777
+            a
+                text-decoration underline
+                color #777
+                display inline
+                &:hover
+                    text-decoration none
+                    color #333
+
+        &__content
+            font-size rem(17)
+            line-height 1.3
+            display flex
+            flex-direction column
+            gap rem(28)
+        
+        &__list
+            display flex
+            flex-direction column
+            gap rem(15)
+            li
+                padding-left rem(17)
+                position relative
+                &::before
+                    content ''
+                    display block
+                    circle(6)
+                    background-color var(--gray-color)
+                    position absolute
+                    top rem(8)
+                    left 0
+        &__help
+            display flex
+            flex-direction column
+            gap rem(8)
+            &__title
+                font-size rem(20)
+                font-weight 700
+                color #666
+                margin-bottom rem(3)
+            &__link
+                display flex
+                align-items center
+                gap rem(6)
+                line-height 1
+                color var(--orange-color)
+                img
+                    transform translateY(-1px)
+                &:hover
+                    text-decoration underline
+    
+    &__video-detail
+        fullBox(fixed)
+        z-index 50
+        padding rem(50)
+        display none
+        align-items center
+        justify-content center
+
+        &.-active-
+            display flex
+
+        &__back
+            fullBox(absolute)
+            background-color rgba(0,0,0,.65)
+            opacity 0
+            transition opacity ease .25s
+
+        &__video
+            position relative
+            width rem(1200)
+            aspect-ratio 16 / 9
+            background-color #ccc
+            border-radius rem(20)
+            box-shadow rem(0, 10, 20) rgba(0,0,0,.5)
+            overflow hidden
+            transform translateY(100px) scale(0.95)
+            opacity 0
+            transition all ease-out .25s
+            iframe
+                width 100%
+                height 100%
+        &.-show-
+            .cv__video-detail__back
+                opacity 1
+            .cv__video-detail__video
+                transition-delay 0.1s
+                transform translateY(0) scale(1)
+                opacity 1

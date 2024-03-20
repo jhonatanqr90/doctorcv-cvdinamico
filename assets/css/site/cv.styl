@@ -68,7 +68,7 @@
         filter blur(12px)
 
     &__front
-        background-color #F0F0F0
+        background-color var(--paper-background)
         width 100%
         margin 0 auto
         position relative
@@ -94,7 +94,7 @@
         &__link
             font-size rem(22)
             display inline
-            font-weight 300
+            font-weight 500
     
     &__block
         display flex
@@ -144,11 +144,11 @@
     &__actions
         position relative
         padding rem(36, 40)
-        border rem(1) solid #F0F0F0
+        border rem(1) solid var(--paper-background)
         transition all ease .25s
 
         &__items
-            background-color #F0F0F0
+            background-color var(--paper-background)
             padding rem(10)
             border-radius rem(30)
 
@@ -161,6 +161,8 @@
             right rem(10)
 
             transition all ease .25s
+
+            display none
 
             img
                 cursor pointer
@@ -202,7 +204,7 @@
         right rem(70)
         z-index 5
 
-        transition all ease-out 0.5s
+        transition all ease-out 0.3s
 
         &::before, &::after
             content ''
@@ -379,3 +381,10 @@
                 transition-delay 0.1s
                 transform translateY(0) scale(1)
                 opacity 1
+
+
+.fnShowFileDetail, .fnShowVideoDetail
+    cursor pointer
+    transition color ease .25s
+    &:hover
+        color var(--blue-color)

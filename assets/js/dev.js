@@ -23,6 +23,7 @@ const site = (function () {
             const $cv = document.getElementById('cv')
             console.log($cv.offsetHeight)
         },
+
         cv: function () {
 
             const $_fnShowFileDetail = document.querySelectorAll('.fnShowFileDetail')
@@ -31,10 +32,12 @@ const site = (function () {
             const $_fnShowVideoDetail = document.querySelectorAll('.fnShowVideoDetail')
             const $_fnCloseVideoDetail = document.querySelectorAll('.fnCloseVideoDetail')
 
-
             const $fileDetail = document.getElementById('fileDetail')
             const $videoDetail = document.getElementById('videoDetail')
             const $videoDetailIframe = document.getElementById('videoDetailIframe')
+            const $fnShowRefence = document.getElementById('fnShowRefence')
+            const $reference = document.getElementById('reference')
+            const $fnCloseReference = document.getElementById('fnCloseReference')
 
             // Detalle de texto
             $_fnShowFileDetail.forEach($button => {
@@ -76,6 +79,20 @@ const site = (function () {
                 })
             })
 
+            // CV de referencia
+            $fnShowRefence.addEventListener('click', () => {
+                $reference.classList.add(DOM.ACTIVE_CLASS)
+                setTimeout(() => {
+                    $reference.classList.add(DOM.SHOW_CLASS)
+                }, 10)
+            })
+
+            $fnCloseReference.addEventListener('click', () => {
+                $reference.classList.remove(DOM.SHOW_CLASS)
+                setTimeout(() => {
+                    $reference.classList.remove(DOM.ACTIVE_CLASS)
+                }, 350)
+            })
 
         }
 

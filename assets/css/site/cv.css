@@ -1,8 +1,0 @@
-.cv {
-  position: relative;
-}
-.cv__front {
-  background-color: var(--white-color);
-  width: rem(1000);
-  height: rem(1000);
-}

@@ -42,3 +42,74 @@
         font-size rem(30)
         font-weight 200
         letter-spacing rem(0.5)
+    
+    @media (max-width: --screen-2xl)
+
+        gap rem(40, 60)
+        padding rem(40, 20, 50)
+
+        &__description
+            font-size rem(27)
+        
+        &__play-button
+            circle(55)
+            border-width rem(4)
+    
+    @media (max-width: --screen-xl)
+
+        &__description
+            font-size rem(25)
+        
+        &__play-button
+            circle(50)
+            &::after
+                border-left rem(14) solid var(--white-color)
+                border-top rem(8) solid transparent
+                border-bottom rem(8) solid transparent
+        
+    
+    @media (max-width: --screen-lg)
+
+        padding rem(30, 20, 40)
+
+        &__description
+            font-size rem(22)
+    
+
+    @media (max-width: --screen-md)
+
+        gap rem(30, 50)
+
+        &__description
+            font-size rem(20)
+        
+        &__play-button
+            circle(45)
+            &::after
+                border-left rem(13) solid var(--white-color)
+                border-top rem(7) solid transparent
+                border-bottom rem(7) solid transparent
+    
+
+    @media (max-width: --screen-sm)
+
+        &__description
+            font-size rem(19)
+        
+
+    @media (max-width: --screen-xs)
+
+        gap rem(25,30)
+        padding rem(30, 20)
+
+        &__description
+            font-size rem(18)
+        
+        &__play-button
+            circle(40)
+            border-width rem(3)
+            &::after
+                border-left rem(13) solid var(--white-color)
+                border-top rem(7) solid transparent
+                border-bottom rem(7) solid transparent
+    

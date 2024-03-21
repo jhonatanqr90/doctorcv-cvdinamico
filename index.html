@@ -27,7 +27,13 @@
             <img src="assets/images/lapicero.png" alt="">
         </picture>
         <header class="header">
-            <img src="assets/images/continental.png" alt="" class="header__logo">
+            <picture>
+                <source media="(max-width:480px)" srcset="assets/images/continental-480.png">
+                <source media="(max-width:768px)" srcset="assets/images/continental-768.png">
+                <source media="(max-width:1024px)" srcset="assets/images/continental-1024.png">
+                <source media="(max-width:1280px)" srcset="assets/images/continental-1280.png">
+                <img src="assets/images/continental.png" alt="" class="header__logo" alt="">
+            </picture>
             <div class="header__play-button"></div>
             <p class="header__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quo quis
                 veritatis distinctio ab error eum tempora ducimus beatae repellendus cumque quaerat eveniet tempore

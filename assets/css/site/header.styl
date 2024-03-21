@@ -8,7 +8,7 @@
     width 100%
     max-width rem(1250)
     margin 0 auto
-    padding rem(53, 20, 60)
+    padding rem(53, 0, 60)
 
     position relative
 
@@ -46,7 +46,7 @@
     @media (max-width: --screen-2xl)
 
         gap rem(40, 60)
-        padding rem(40, 20, 50)
+        padding rem(40, 0, 50)
 
         &__description
             font-size rem(27)
@@ -70,7 +70,7 @@
     
     @media (max-width: --screen-lg)
 
-        padding rem(30, 20, 40)
+        padding rem(30, 0, 40)
 
         &__description
             font-size rem(22)
@@ -100,7 +100,7 @@
     @media (max-width: --screen-xs)
 
         gap rem(25,30)
-        padding rem(30, 20)
+        padding rem(30, 0)
 
         &__description
             font-size rem(18)
@@ -112,4 +112,21 @@
                 border-left rem(13) solid var(--white-color)
                 border-top rem(7) solid transparent
                 border-bottom rem(7) solid transparent
+    
+
+    @media (max-width: --screen-2xs)
+
+        gap rem(20,25)
+        padding rem(30, 0, 25)
+
+        &__description
+            font-size rem(17)
+        
+        &__play-button
+            circle(36)
+            border-width rem(2)
+            &::after
+                border-left rem(11) solid var(--white-color)
+                border-top rem(6) solid transparent
+                border-bottom rem(6) solid transparent
     

@@ -6,8 +6,49 @@
     padding rem(100, 0, 60)
     color #fff
     font-size rem(22)
-    font-weight 300
+    position relative
     display flex
     justify-content flex-end
     align-items center
     gap rem(10)
+
+    @media (max-width: --screen-2xl)
+        padding rem(80, 0, 60)
+    
+
+    @media (max-width: --screen-xl)
+        padding rem(70, 0, 60)
+
+
+    @media (max-width: --screen-lg)
+        padding rem(60, 0, 50)
+    
+
+    @media (max-width: --screen-md)
+        padding rem(50, 0, 40)
+        font-size rem(20)
+
+        &__logo
+            max-width rem(220)
+        
+
+    @media (max-width: --screen-sm)
+        padding rem(40, 0, 30)
+
+        &__logo
+            max-width rem(200)
+    
+
+    @media (max-width: --screen-xs)
+        padding rem(30, 0, 20)
+        font-size rem(19)
+        gap rem(6)
+
+        &__logo
+            max-width rem(180)
+    
+
+    @media (max-width: --screen-2xs)
+        font-size rem(18)
+        &__logo
+            max-width rem(160)

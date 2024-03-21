@@ -1,6 +1,7 @@
 .cv
     position relative
-    width rem(966)
+    width 100%
+    max-width rem(966)
     margin 0 auto
 
     &__back
@@ -81,9 +82,16 @@
         flex-direction column
     
     &__header
+        position relative
         display flex
-        flex-direction column
         align-items flex-start
+        justify-content space-between
+        gap rem(50)
+        
+        &__content
+            display flex
+            flex-direction column
+            align-items flex-start
 
         &__title
             font-size rem(63)
@@ -95,10 +103,16 @@
             font-size rem(22)
             display inline
             font-weight 500
+        
+        &__photo
+            width rem(190)
+            height rem(220)
+            border rem(1) dashed var(--gray-color)
     
     &__block
         display flex
         flex-direction column
+        align-items flex-start
         gap rem(17)
         font-size rem(17)
         font-weight 300
@@ -108,11 +122,6 @@
             line-height 1
             font-weight 800
             text-transform uppercase
-        
-        &__text
-
-            &.m--mini
-                max-width rem(550)
         
         &__article
             margin-bottom rem(10)
@@ -147,52 +156,13 @@
         border rem(1) solid var(--paper-background)
         transition all ease .25s
 
-        &__items
-            background-color var(--paper-background)
-            padding rem(10)
-            border-radius rem(30)
-
-            display flex
-            flex-direction column
-            gap rem(13)
-
-            position absolute
-            top rem(10)
-            right rem(10)
-
-            transition all ease .25s
-
-            display none
-
-            img
-                cursor pointer
-
-                opacity 0
-                transform translateX(15px)
-                transition all ease-out .25s
-
-                &:nth-child(1)
-                    transition-delay 0
-                &:nth-child(2)
-                    transition-delay 0.06s
-                &:nth-child(3)
-                    transition-delay 0.12s
-
         &:hover
             background-color #F5F5F5
             color #111
             border-color #EBEBEB
 
-            .cv__actions__items
-                background-color #F5F5F5
-                
-                img
-                    opacity 0.4
-                    transform translateX(0)
-    
-                    &:hover
-                        transform scale(1.2)
-                        opacity 1
+            .cv__header__photo
+                border-color #111
     
     &__more
         circle(48)
@@ -242,26 +212,27 @@
 
         &__back
             fullBox(absolute)
-            background-color rgba(0,0,0,.65)
             opacity 0
             transition opacity ease .25s
         
         &__container
-            width rem(500)
+            width 100%
+            max-width rem(660)
             height 100%
-            background-color var(--white-color)
+            backdrop-filter blur(10px)
+            background-color rgba(0,0,0,.8)
             position relative
-            padding rem(70, 50)
-            color var(--gray-color)
-            box-shadow rem(-10, 0, 10) rgba(0,0,0,.2)
+            padding rem(100, 80)
+            color var(--white-color)
+            overflow auto
             transform translateX(100%)
             transition transform ease .25s
         
         &__close
             box(30)
             position absolute
-            top rem(20)
-            right rem(20)
+            top rem(30)
+            right rem(30)
             cursor pointer
             &::before, &::after
                 content ''
@@ -269,7 +240,7 @@
                 width 100%
                 height rem(6)
                 border-radius rem(3)
-                background-color #666
+                background-color var(--white-color)
                 position absolute
                 top 50%
                 left 50%
@@ -282,36 +253,38 @@
                 &::before, &::after
                     background-color var(--orange-color)
         
+        &__video
+            width 100%
+            aspect-ratio 16 / 9
+            margin-bottom rem(40)
+            border-radius rem(16)
+        
         &__title
             font-size rem(26)
             font-weight 900
             text-transform uppercase
-            margin-bottom rem(25)
-            color #666
+            margin-bottom rem(15)
         
         &__text, &__list
             strong
-                font-weight 600
-                color #777
+                font-weight 700
             a
                 text-decoration underline
-                color #777
                 display inline
                 &:hover
                     text-decoration none
-                    color #333
 
         &__content
             font-size rem(17)
             line-height 1.3
             display flex
             flex-direction column
-            gap rem(28)
+            gap rem(20)
         
         &__list
             display flex
             flex-direction column
-            gap rem(15)
+            gap rem(10)
             li
                 padding-left rem(17)
                 position relative
@@ -326,19 +299,20 @@
         &__help
             display flex
             flex-direction column
-            gap rem(8)
+            gap rem(15)
+            margin-top rem(15)
             &__title
-                font-size rem(20)
-                font-weight 700
-                color #666
+                font-size rem(24)
+                font-weight 900
                 margin-bottom rem(3)
+                text-transform uppercase
             &__link
                 display flex
                 align-items center
-                gap rem(6)
+                gap rem(15)
                 line-height 1
-                color var(--orange-color)
                 img
+                    flex none
                     transform translateY(-1px)
                 &:hover
                     text-decoration underline
@@ -382,6 +356,244 @@
                 transform translateY(0) scale(1)
                 opacity 1
 
+    
+    @media (max-width: --screen-2xl)
+
+        &__front
+            padding rem(25)
+
+        &__actions
+            padding rem(36, 35)
+        
+        &__header
+            &__title
+                font-size rem(58)
+        
+        &__more
+            bottom rem(60)
+            right rem(60)
+    
+
+    @media (max-width: --screen-xl)
+
+        &__front
+            padding rem(20)
+
+        &__actions
+            padding rem(30)
+        
+        &__header
+            &__title
+                font-size rem(51)
+            &__link
+                font-size rem(20)
+        
+        &__block
+            gap rem(15)
+            &__title
+                font-size rem(30)
+        
+        &__more
+            bottom rem(45)
+            right rem(45)
+    
+
+    @media (max-width: --screen-md)
+
+        &__front
+            padding rem(20)
+
+        &__actions
+            padding rem(25)
+        
+        &__header
+            &__title
+                font-size rem(45)
+            &__link
+                font-size rem(19)
+            &__photo
+                width rem(180)
+                height rem(200)
+        
+        &__block
+            gap rem(15)
+            &__title
+                font-size rem(28)
+        
+        &__more
+            bottom rem(35)
+            right rem(35)
+        
+        &__file-detail
+            
+            &__container
+                width 100%
+                max-width rem(600)
+                padding rem(70, 60)
+            
+            &__close
+                box(28)
+                top rem(20)
+                right rem(20)
+            
+            &__video
+                margin-bottom rem(35)
+                border-radius rem(16)
+            
+            &__title
+                font-size rem(24)
+                margin-bottom rem(10)
+        
+        &__video-detail
+            padding rem(40)
+            &__video
+                border-radius rem(16)
+        
+
+    @media (max-width: --screen-sm)
+
+        &__actions
+            padding rem(20)
+        
+        &__header
+            gap rem(20)
+            &__title
+                font-size rem(40)
+            &__link
+                font-size rem(18)
+             &__photo
+                width rem(150)
+                height rem(180)
+        
+        &__block
+            gap rem(10)
+            font-size rem(16)
+            &__title
+                font-size rem(25)
+        
+        &__more
+            bottom rem(30)
+            right rem(30)
+            box(40)
+            &::before, &::after
+                width rem(6)
+                height rem(20)
+        
+
+        &__file-detail
+            
+            &__container
+                width 100%
+                max-width rem(540)
+                padding rem(60, 50)
+            
+            &__close
+                box(26)
+            
+        &__video-detail
+            padding rem(30)
+            &__video
+                border-radius rem(14)
+    
+
+    @media (max-width: --screen-xs)
+
+        &__front
+            padding rem(15)
+
+        &__actions
+            padding rem(15)
+        
+        &__header
+            gap rem(10)
+            &__title
+                font-size rem(32)
+                margin-bottom rem(5)
+            &__link
+                font-size rem(17)
+            &__photo
+                width rem(120)
+                height rem(150)
+        
+        &__block
+            gap rem(10)
+            font-size rem(15)
+            &__title
+                font-size rem(21)
+        
+        &__more
+            bottom rem(25)
+            right rem(25)
+        
+        &__file-detail
+            
+            &__container
+                width 100%
+                padding rem(45, 30)
+            
+            &__close
+                box(24)
+                top rem(10)
+                right rem(10)
+            
+            &__video
+                margin-bottom rem(30)
+                border-radius rem(12)
+            
+            &__title
+                font-size rem(20)
+
+            &__content
+                font-size rem(16)
+                gap rem(15)
+            
+            &__list
+                gap rem(7)
+
+            &__help
+                margin-top rem(10)
+                &__title
+                    font-size rem(20)
+                    margin-bottom 0
+                &__link
+                    gap rem(12)
+        
+        &__video-detail
+            padding rem(20)
+            &__video
+                border-radius rem(12)
+    
+
+    @media (max-width: --screen-2xs)
+
+        &__front
+            padding rem(12)
+
+        &__actions
+            padding rem(12)
+        
+        &__header
+            &__title
+                font-size rem(28)
+            &__link
+                font-size rem(16)
+            &__photo
+                width rem(100)
+                height rem(110)
+        
+        &__block
+            gap rem(10)
+            font-size rem(14)
+            &__title
+                font-size rem(20)
+        
+        &__more
+            bottom rem(20)
+            right rem(20)
+            box(36)
+            &::before, &::after
+                width rem(5)
+                height rem(17)
 
 .fnShowFileDetail, .fnShowVideoDetail
     cursor pointer

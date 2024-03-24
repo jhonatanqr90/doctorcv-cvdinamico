@@ -108,6 +108,7 @@
             width rem(190)
             height rem(220)
             border rem(1) dashed var(--gray-color)
+            
     
     &__block
         display flex
@@ -160,9 +161,13 @@
             background-color #F5F5F5
             color #111
             border-color #EBEBEB
+            cursor pointer
 
             .cv__header__photo
                 border-color #111
+                transition all ease .25s
+                &:hover
+                    border rem(2) dashed var(--blue-color)
     
     &__more
         circle(48)
@@ -600,3 +605,5 @@
     transition color ease .25s
     &:hover
         color var(--blue-color)
+    &.m--no-hover:hover
+        color initial

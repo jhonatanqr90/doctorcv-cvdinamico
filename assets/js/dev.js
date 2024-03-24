@@ -26,13 +26,15 @@ const site = (function () {
 
         cv: function () {
 
+            let $box_opened = false
+            const $boxs_viewed = new Set()
+
             const $_fnShowFileDetail = document.querySelectorAll('.fnShowFileDetail')
             const $_closeFileDetail = document.querySelectorAll('.closeFileDetail')
 
             const $_fnShowVideoDetail = document.querySelectorAll('.fnShowVideoDetail')
             const $_fnCloseVideoDetail = document.querySelectorAll('.fnCloseVideoDetail')
 
-            const $fileDetail = document.getElementById('fileDetail')
             const $videoDetail = document.getElementById('videoDetail')
             const $videoDetailIframe = document.getElementById('videoDetailIframe')
             const $fnShowRefence = document.getElementById('fnShowRefence')
@@ -41,19 +43,37 @@ const site = (function () {
 
             // Detalle de texto
             $_fnShowFileDetail.forEach($button => {
-                $button.addEventListener('click', () => {
-                    $fileDetail.classList.add(DOM.ACTIVE_CLASS)
+                $button.addEventListener('click', (event) => {
+                    const DATA_TARGET = event.target.dataset.target
+                    const CONTAINER_TARGET = $button.dataset.target
+                    const TARGET_ID = DATA_TARGET ?? CONTAINER_TARGET
+                    const $box_detail = document.getElementById(TARGET_ID)
+
+                    if (!$box_detail) return
+
+                    $boxs_viewed.add(TARGET_ID)
+                    console.log($boxs_viewed)
+
+                    const $video_iframe = $box_detail.querySelector('.fnfileDetailIframe')
+                    const DATA_VIDEO_IFRAME = $video_iframe.dataset.src
+                    $video_iframe.src = DATA_VIDEO_IFRAME
+
+                    $box_detail.classList.add(DOM.ACTIVE_CLASS)
                     setTimeout(() => {
-                        $fileDetail.classList.add(DOM.SHOW_CLASS)
+                        $box_detail.classList.add(DOM.SHOW_CLASS)
+                        $box_opened = $box_detail
                     }, 10)
+
                 })
             })
 
             $_closeFileDetail.forEach($button => {
                 $button.addEventListener('click', () => {
-                    $fileDetail.classList.remove(DOM.SHOW_CLASS)
+                    $box_opened.classList.remove(DOM.SHOW_CLASS)
                     setTimeout(() => {
-                        $fileDetail.classList.remove(DOM.ACTIVE_CLASS)
+                        $box_opened.classList.remove(DOM.ACTIVE_CLASS)
+                        $box_opened.querySelector('.fnfileDetailIframe').src = ''
+                        $box_opened = false
                     }, 300)
                 })
             })

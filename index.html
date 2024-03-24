@@ -67,15 +67,15 @@
             <div class="cv__shadow-4"></div>
             <div class="cv__shadow-5"></div>
             <div class="cv__front">
-                <div class="cv__header cv__actions">
+                <div class="cv__header cv__actions fnShowFileDetail m--no-hover" data-target="datos-generales">
                     <div class="cv__header__content">
-                        <h1 class="cv__header__title fnShowFileDetail">Jorge Mori</h1>
-                        <span class="cv__header__link fnShowFileDetail">(+511)-95557-8561</span>
-                        <span class="cv__header__link fnShowFileDetail">jramos@email.com</span>
+                        <h1 class="cv__header__title fnShowFileDetail" data-target="nombres-y-apellidos">Jorge Mori</h1>
+                        <span class="cv__header__link fnShowFileDetail" data-target="telefono">(+511)-95557-8561</span>
+                        <span class="cv__header__link fnShowFileDetail" data-target="email">jramos@email.com</span>
                     </div>
-                    <div class="cv__header__photo fnShowFileDetail"></div>
+                    <div class="cv__header__photo fnShowFileDetail" data-target="foto"></div>
                 </div>
-                <div class="cv__block cv__actions fnShowFileDetail">
+                <div class="cv__block cv__actions fnShowFileDetail m--no-hover">
                     <h2 class="cv__block__title">PERFIL PROFESIONAL</h2>
                     <p class="cv__block__text">
                         Profesional en ventas con una década de experiencia premiada, reconocido por exceder metas de
@@ -149,12 +149,161 @@
         </footer>
     </div>
 
-    <div id="fileDetail" class="cv__file-detail">
+    <!-- Primer Bloque -->
+    <div id="datos-generales" class="cv__file-detail">
         <div class="cv__file-detail__back closeFileDetail"></div>
         <div class="cv__file-detail__container">
             <div class="cv__file-detail__close closeFileDetail"></div>
-            <iframe id="fileDetailIframe" class="cv__file-detail__video"
-                src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nombres-y-apellidos" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="telefono" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="email" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="foto" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             <h6 class="cv__file-detail__title">Detalles</h6>

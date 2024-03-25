@@ -1,0 +1,12 @@
+{
+    "logotipo": {
+        "default": "doctorcv.png",
+        "1536": "doctorcv-1536.png",
+        "1280": "doctorcv-1280.png",
+        "1024": "doctorcv-1024.png",
+        "768": "doctorcv-768.png",
+        "480": "doctorcv-480.png"
+    },
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "url_video": "https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn"
+}

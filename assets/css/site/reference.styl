@@ -37,23 +37,80 @@
         transform translateY(100px)
         transition all ease .25s
 
-        li
-            font-size rem(40)
-            text-transform uppercase
-            padding rem(65, 50)
-            font-weight 800
-            color var(--gray-color)
-            border-bottom rem(1) solid rgba(0,0,0,.05)
-            cursor pointer
-            line-height 1
-            transition all ease .25s
-            &:nth-child(2)
-                border-color rgba(0,0,0,.1)
-            &:nth-child(3)
-                border-color rgba(0,0,0,.2)
-            &:hover
+    &__item
+        display flex
+        flex-direction column
+        gap rem(10)
+        padding rem(55, 50)
+        border-bottom rem(1) solid rgba(0,0,0,.08)
+        transition all ease .25s
+        &.m--header
+            flex-direction row
+        &:hover
+            background-color #f5f5f5
+            .reference__title
                 color #333
-                background-color #f5f5f5
+            .reference__photo
+                border-color #333
+    
+    &__left
+        flex 1
+        display flex
+        flex-direction column
+        gap rem(10)
+
+    &__photo
+        width rem(110)
+        height rem(130)
+        border rem(2) dashed var(--gray-color)
+        padding rem(10)
+        .reference__checkbox__box
+            box(20)
+            border-width rem(2)
+            margin-right rem(8)
+    
+    &__title
+        font-size rem(36)
+        text-transform uppercase
+        font-weight 800
+        color var(--gray-color)
+        line-height 1
+        transition all ease .25s
+    
+    &__step
+        display flex
+        &.m--mini
+            .reference__checkbox__box
+                box(20)
+                border-width rem(2)
+                margin-right rem(8)
+            .reference__title
+                font-size rem(19)
+                font-weight 600
+                padding-top rem(5)
+        
+    &__checkbox
+        margin rem(2, 15, 0, 0)
+        input
+            display none
+            &:checked + .reference__checkbox__box
+                border-color var(--orange-color)
+                position relative
+                &::before
+                    content ''
+                    display block
+                    width 80%
+                    height 40%
+                    border-left rem(3) solid var(--orange-color)
+                    border-bottom rem(3) solid var(--orange-color)
+                    position absolute
+                    top 50%
+                    left 50%
+                    transform translate(-50%, -70%) rotate(-45deg)
+        &__box
+            display block
+            box(26)
+            border rem(3) solid var(--gray-color)
     
 
     @media (max-width: --screen-xl)
@@ -63,33 +120,63 @@
 
         &__content
             max-width rem(660)
-            li
-                padding rem(60, 48)
-                font-size rem(36)
+        &__item
+            padding rem(60, 48)
+        &__title
+            font-size rem(36)
     
 
     @media (max-width: --screen-md)
 
         &__content
             max-width rem(560)
-            li
-                padding rem(50, 40)
-                font-size rem(32)
+        &__item
+            padding rem(50, 40)
+        &__title
+            font-size rem(32)
+        &__checkbox__box
+            box(23)
+        &__step
+            &.m--mini
+                .reference__checkbox__box
+                    box(19)
+                    margin-right rem(6)
+                .reference__title
+                    font-size rem(18)
     
 
     @media (max-width: --screen-sm)
 
         &__content
             max-width rem(480)
-            li
-                padding rem(40, 30)
-                font-size rem(28)
+        &__item
+            padding rem(40, 30)
+        &__title
+            font-size rem(28)
+        &__checkbox__box
+            box(21)
+        &__step
+            &.m--mini
+                .reference__checkbox__box
+                    box(18)
+                    margin-right rem(6)
+                .reference__title
+                    font-size rem(17)
     
 
     @media (max-width: --screen-xs)
 
         &__content
             max-width rem(380)
-            li
-                padding rem(30, 20)
-                font-size rem(25)
+        &__item
+            padding rem(30, 20)
+        &__title
+            font-size rem(23)
+        &__checkbox__box
+            box(20)
+        &__step
+            &.m--mini
+                .reference__checkbox__box
+                    box(17)
+                .reference__title
+                    font-size rem(16)

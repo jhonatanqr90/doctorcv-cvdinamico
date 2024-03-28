@@ -27,7 +27,7 @@ const site = (function () {
         cv: function () {
 
             let $box_opened = false
-            const $boxs_viewed = new Set()
+            const $boxs_viewed = new Set([])
 
             const $_fnShowFileDetail = document.querySelectorAll('.fnShowFileDetail')
             const $_closeFileDetail = document.querySelectorAll('.closeFileDetail')
@@ -100,8 +100,13 @@ const site = (function () {
             })
 
             // CV de referencia
-            $fnShowRefence.addEventListener('click', () => {
+            $fnShowRefence?.addEventListener('click', () => {
                 $reference.classList.add(DOM.ACTIVE_CLASS)
+                $boxs_viewed.forEach(box => {
+                    if (box !== undefined) {
+                        $reference.querySelector(`[data-reference="${box}"]`).checked = true
+                    }
+                })
                 setTimeout(() => {
                     $reference.classList.add(DOM.SHOW_CLASS)
                 }, 10)

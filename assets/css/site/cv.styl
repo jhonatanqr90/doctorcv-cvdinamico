@@ -157,6 +157,11 @@
         border rem(1) solid var(--paper-background)
         transition all ease .25s
 
+        &:has(.cv__block__article__title:hover) .cv__block__article__title
+        &:has(.cv__block__article__subtitle:hover) .cv__block__article__subtitle
+        &:has(.cv__block__article__list:hover) .cv__block__article__list
+            color var(--blue-color)
+
         &:hover
             background-color #F5F5F5
             color #111

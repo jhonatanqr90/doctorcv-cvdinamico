@@ -75,7 +75,7 @@
                     </div>
                     <div class="cv__header__photo fnShowFileDetail" data-target="foto"></div>
                 </div>
-                <div class="cv__block cv__actions fnShowFileDetail m--no-hover">
+                <div class="cv__block cv__actions fnShowFileDetail m--no-hover" data-target="perfil-profesional">
                     <h2 class="cv__block__title">PERFIL PROFESIONAL</h2>
                     <p class="cv__block__text">
                         Profesional en ventas con una década de experiencia premiada, reconocido por exceder metas de
@@ -84,14 +84,19 @@
                         para lograr resultados excepcionales.</p>
                 </div>
                 <div class="cv__block cv__actions">
-                    <h2 class="cv__block__title fnShowFileDetail">Experiencia laboral</h2>
+                    <h2 class="cv__block__title fnShowFileDetail" data-target="experiencia-laboral">Experiencia laboral
+                    </h2>
                     <article class="cv__block__article">
-                        <h3 class="cv__block__article__title fnShowFileDetail">TIENDAS ELECTRO WORLD WIDE INC.INC., Lima
+                        <h3 class="cv__block__article__title fnShowFileDetail"
+                            data-target="experiencia-laboral-organizacion">TIENDAS
+                            ELECTRO WORLD WIDE INC.INC., Lima
                         </h3>
-                        <strong class="cv__block__article__subtitle fnShowFileDetail">Gerente de Ventas de
+                        <strong class="cv__block__article__subtitle fnShowFileDetail"
+                            data-target="experiencia-laboral-cargos-fechas">Gerente de Ventas de
                             Electrodomésticos, setiembre
                             2023 a la fecha</strong>
-                        <ul class="cv__block__article__list fnShowFileDetail">
+                        <ul class="cv__block__article__list fnShowFileDetail"
+                            data-target="experiencia-laboral-logros-laborales">
                             <li>Implementé una campaña de marketing multicanal que incrementó la interacción del cliente
                                 en un 50% y elevó la conversión de ventas en línea en un 40% mediante la integración de
                                 realidad aumentada en catálogos digitales.</li>
@@ -102,11 +107,14 @@
                         </ul>
                     </article>
                     <article class="cv__block__article">
-                        <h3 class="cv__block__article__title fnShowFileDetail">TECNOCASA, Lima</h3>
-                        <strong class="cv__block__article__subtitle fnShowFileDetail">Asesor Experto en Ventas de
+                        <h3 class="cv__block__article__title fnShowFileDetail"
+                            data-target="experiencia-laboral-organizacion">TECNOCASA, Lima</h3>
+                        <strong class="cv__block__article__subtitle fnShowFileDetail"
+                            data-target="experiencia-laboral-cargos-fechas">Asesor Experto en Ventas de
                             Electrodomésticos,
                             enero 2020 agosto 2023</strong>
-                        <ul class="cv__block__article__list fnShowFileDetail">
+                        <ul class="cv__block__article__list fnShowFileDetail"
+                            data-target="experiencia-laboral-logros-laborales">
                             <li>Incrementé las ventas personales en un 30%, superando constantemente los objetivos
                                 mensuales a través de un enfoque consultivo y personalizado con los clientes.</li>
                             <li>Introduje un enfoque de venta cruzada, lo que resultó en un aumento del 20% en la venta
@@ -115,31 +123,140 @@
                     </article>
                 </div>
                 <div class="cv__block cv__actions">
-                    <h2 class="cv__block__title fnShowFileDetail">EXPERIENCIA ACADÉMICA</h2>
+                    <h2 class="cv__block__title fnShowFileDetail" data-target="experiencia-academica">EXPERIENCIA
+                        ACADÉMICA</h2>
                     <article class="cv__block__article">
-                        <h3 class="cv__block__article__title fnShowFileDetail">UNIVERSIDAD DE NEGOCIOS Y TECNOLOGÍA,
+                        <h3 class="cv__block__article__title fnShowFileDetail"
+                            data-target="experiencia-academica-centro-educativo">UNIVERSIDAD DE NEGOCIOS Y TECNOLOGÍA,
                             Lima</h3>
-                        <strong class="cv__block__article__subtitle fnShowFileDetail">Licenciado en Administración de
+                        <strong class="cv__block__article__subtitle fnShowFileDetail"
+                            data-target="experiencia-academica-grado-fechas">Licenciado en
+                            Administración de
                             Empresas, diciembre
                             2019</strong>
-                        <ul class="cv__block__article__list fnShowFileDetail">
+                        <ul class="cv__block__article__list fnShowFileDetail"
+                            data-target="experiencia-academica-logros-academicos">
                             <li>Graduado con honores</li>
                             <li>Presidente del Club de Emprendedores.</li>
                             <li>Organizador de la Feria Anual de Innovación.</li>
                         </ul>
                     </article>
                 </div>
-                <div id="fnShowRefence" class="cv__more"></div>
+                <div id="fnShowRefence" class="cv__more">
+                </div>
             </div>
         </div>
         <div id="reference" class="reference">
             <div id="fnCloseReference" class="reference__back"></div>
             <div class="reference__container">
                 <ul class="reference__content">
-                    <li>Datos <br>Generales</li>
-                    <li>Perfil <br>Profesional</li>
-                    <li>Experiencia <br>Laboral</li>
-                    <li>Experiencia <br>Académica</li>
+                    <li class="reference__item m--header">
+                        <div class="reference__left">
+                            <div class="reference__step">
+                                <span class="reference__checkbox">
+                                    <input type="checkbox" data-reference="datos-generales">
+                                    <span class="reference__checkbox__box"></span>
+                                </span>
+                                <span class="reference__title">Datos <br>Generales</span>
+                            </div>
+                            <div class="reference__step m--mini">
+                                <span class="reference__checkbox">
+                                    <input type="checkbox" data-reference="nombres-y-apellidos">
+                                    <span class="reference__checkbox__box"></span>
+                                </span>
+                                <span class="reference__title">Nombres y apellidos</span>
+                            </div>
+                            <div class="reference__step m--mini">
+                                <span class="reference__checkbox">
+                                    <input type="checkbox" data-reference="telefono">
+                                    <span class="reference__checkbox__box"></span>
+                                </span>
+                                <span class="reference__title">Teléfono</span>
+                            </div>
+                            <div class="reference__step m--mini">
+                                <span class="reference__checkbox">
+                                    <input type="checkbox" data-reference="email">
+                                    <span class="reference__checkbox__box"></span>
+                                </span>
+                                <span class="reference__title">Email</span>
+                            </div>
+                        </div>
+                        <div class="reference__photo">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="foto">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="reference__item">
+                        <div class="reference__step">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="perfil-profesional">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                            <span class="reference__title">Perfil <br>Profesional</span>
+                        </div>
+                    </li>
+                    <li class="reference__item">
+                        <div class="reference__step">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="experiencia-laboral">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                            <span class="reference__title">Experiencia <br>Laboral</span>
+                        </div>
+                        <div class="reference__step m--mini">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="experiencia-laboral-organizacion">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                            <span class="reference__title">Organización</span>
+                        </div>
+                        <div class="reference__step m--mini">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="experiencia-laboral-cargos-fechas">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                            <span class="reference__title">Cargos, Fechas</span>
+                        </div>
+                        <div class="reference__step m--mini">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="experiencia-laboral-logros-laborales">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                            <span class="reference__title">Logros Laborales</span>
+                        </div>
+                    </li>
+                    <li class="reference__item">
+                        <div class="reference__step">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="experiencia-academica">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                            <span class="reference__title">Experiencia <br>Académica</span>
+                        </div>
+                        <div class="reference__step m--mini">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="experiencia-academica-centro-educativo">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                            <span class="reference__title">Centro educativo</span>
+                        </div>
+                        <div class="reference__step m--mini">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="experiencia-academica-grado-fechas">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                            <span class="reference__title">Grado, fechas</span>
+                        </div>
+                        <div class="reference__step m--mini">
+                            <span class="reference__checkbox">
+                                <input type="checkbox" data-reference="experiencia-academica-logros-academicos">
+                                <span class="reference__checkbox__box"></span>
+                            </span>
+                            <span class="reference__title">Logros académicos</span>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -334,6 +451,340 @@
             </div>
         </div>
     </div>
+
+    <div id="perfil-profesional" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experiencia-laboral" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experiencia-laboral-organizacion" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experiencia-laboral-cargos-fechas" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experiencia-laboral-logros-laborales" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experiencia-academica" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experiencia-academica-centro-educativo" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experiencia-academica-grado-fechas" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experiencia-academica-logros-academicos" class="cv__file-detail">
+        <div class="cv__file-detail__back closeFileDetail"></div>
+        <div class="cv__file-detail__container">
+            <div class="cv__file-detail__close closeFileDetail"></div>
+            <iframe class="cv__file-detail__video fnfileDetailIframe"
+                data-src="https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h6 class="cv__file-detail__title">Detalles</h6>
+            <div class="cv__file-detail__content">
+                <p class="cv__file-detail__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    nobis nostrum, in officia tempore
+                    dolore ex est praesentium <strong>quibusdam magni commodi</strong> perspiciatis minima sequi quos
+                    cumque <a href="#">tenetur</a>
+                    voluptatum modi eligendi?</p>
+                <ul class="cv__file-detail__list">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptas <strong>nobis nostrum</strong>, in officia tempore
+                        dolore ex est praesentium quibusdam magni.</li>
+                    <li>Minima sequi <a href="#">quos cumque tenetur</a>
+                        voluptatum modi eligendi?</li>
+                </ul>
+                <div class="cv__file-detail__help">
+                    <strong class="cv__file-detail__help__title">+Recursos</strong>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/file.svg" width="18" alt="">
+                        Como mejorar
+                    </a>
+                    <a href="#" class="cv__file-detail__help__link">
+                        <img src="assets/images/image.svg" width="18" alt="">
+                        Libro de más ayuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div id="videoDetail" class="cv__video-detail">
         <div class="cv__video-detail__back fnCloseVideoDetail"></div>

@@ -48,7 +48,7 @@ const site = (function () {
             const $dataDescripcion = document.querySelector('[data-descripcion]')
             const $dataStyle = document.querySelector('[data-style]')
 
-            $dataLogo.src = '/json/' + universidad.archivo_png
+            $dataLogo.src = 'json/' + universidad.archivo_png
             $dataDescripcion.innerHTML = universidad.descripcion
             $dataStyle.innerHTML = `:root{--width-logo:${universidad.archivo_width}px;}`
 

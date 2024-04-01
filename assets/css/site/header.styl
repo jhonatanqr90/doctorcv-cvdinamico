@@ -12,6 +12,10 @@
 
     position relative
 
+    &__logo
+        width var(--width-logo)
+        height auto
+
     &__play-button
         circle(60)
         border rem(5) solid var(--white-color)
@@ -48,6 +52,9 @@
         gap rem(40, 60)
         padding rem(40, 0, 50)
 
+        &__logo
+            width calc(var(--width-logo) * 0.9)
+
         &__description
             font-size rem(27)
         
@@ -72,6 +79,9 @@
 
         padding rem(30, 0, 40)
 
+        &__logo
+            width calc(var(--width-logo) * 0.8)
+
         &__description
             font-size rem(22)
     
@@ -79,6 +89,9 @@
     @media (max-width: --screen-md)
 
         gap rem(30, 50)
+
+        &__logo
+            width calc(var(--width-logo) * 0.7)
 
         &__description
             font-size rem(20)
@@ -92,6 +105,9 @@
     
 
     @media (max-width: --screen-sm)
+
+        &__logo
+            width calc(var(--width-logo) * 0.6)
 
         &__description
             font-size rem(19)

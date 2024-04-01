@@ -1,4 +1,6 @@
-'use strict';
+'use strict'
+import data from '../../json/data.json' with { type: "json" }
+
 const site = (function () {
 
     const DOM = {
@@ -11,20 +13,20 @@ const site = (function () {
 
     const siteFunctions = function () {
 
-        events.header();
         events.cv();
 
     };
 
     const events = {
 
-        header: function () {
-
-            const $cv = document.getElementById('cv')
-            console.log($cv.offsetHeight)
-        },
-
         cv: function () {
+
+            const { organizaciones } = data
+
+            const queryString = window.location.search;
+            const params = new URLSearchParams(queryString);
+            const keySearch = params.get('universidad') || 'default'
+            const universidad = organizaciones.filter(organizacion => { return organizacion.nombre == keySearch }, {})[0]
 
             let $box_opened = false
             const $boxs_viewed = new Set([])
@@ -41,6 +43,15 @@ const site = (function () {
             const $reference = document.getElementById('reference')
             const $fnCloseReference = document.getElementById('fnCloseReference')
 
+            // Datos dinámicos
+            const $dataLogo = document.querySelector('[data-logo]')
+            const $dataDescripcion = document.querySelector('[data-descripcion]')
+            const $dataStyle = document.querySelector('[data-style]')
+
+            $dataLogo.src = '/json/' + universidad.archivo_png
+            $dataDescripcion.innerHTML = universidad.descripcion
+            $dataStyle.innerHTML = `:root{--width-logo:${universidad.archivo_width}px;}`
+
             // Detalle de texto
             $_fnShowFileDetail.forEach($button => {
                 $button.addEventListener('click', (event) => {
@@ -52,7 +63,6 @@ const site = (function () {
                     if (!$box_detail) return
 
                     $boxs_viewed.add(TARGET_ID)
-                    console.log($boxs_viewed)
 
                     const $video_iframe = $box_detail.querySelector('.fnfileDetailIframe')
                     const DATA_VIDEO_IFRAME = $video_iframe.dataset.src
@@ -83,7 +93,7 @@ const site = (function () {
                 $button.addEventListener('click', () => {
                     $videoDetail.classList.add(DOM.ACTIVE_CLASS)
                     setTimeout(() => {
-                        $videoDetailIframe.src = 'https://www.youtube.com/embed/pRxfifDkmCk?si=fiDCD0wWZn7wVuNn'
+                        $videoDetailIframe.src = universidad.url_video
                         $videoDetail.classList.add(DOM.SHOW_CLASS)
                     }, 10)
                 })

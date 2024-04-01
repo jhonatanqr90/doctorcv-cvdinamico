@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style data-style></style>
 </head>
 
 <body>
@@ -47,17 +48,9 @@
             <img src="assets/images/lapicero.png" alt="">
         </picture>
         <header class="header">
-            <picture>
-                <source media="(max-width:480px)" srcset="assets/images/continental-480.png">
-                <source media="(max-width:768px)" srcset="assets/images/continental-768.png">
-                <source media="(max-width:1024px)" srcset="assets/images/continental-1024.png">
-                <source media="(max-width:1280px)" srcset="assets/images/continental-1280.png">
-                <img src="assets/images/continental.png" alt="" class="header__logo" alt="">
-            </picture>
+            <img data-logo src="" alt="CV Dinámico" class="header__logo" styles="--width-logo:100px;" />
             <div class="header__play-button fnShowVideoDetail"></div>
-            <p class="header__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus quo quis
-                veritatis distinctio ab error eum tempora ducimus beatae repellendus cumque quaerat eveniet tempore
-                doloremque soluta commodi, officia harum sit.</p>
+            <p data-descripcion class="header__description"></p>
         </header>
         <div id="cv" class="cv">
             <div class="cv__back"></div>

@@ -25,7 +25,8 @@ const site = (function () {
 
             const queryString = window.location.search;
             const params = new URLSearchParams(queryString);
-            const keySearch = params.get('universidad') || 'default'
+            const temporalKey = params.get('universidad') || 'default'
+            const keySearch = organizaciones.includes(temporalKey) ? temporalKey : 'default'
             const universidad = organizaciones.filter(organizacion => { return organizacion.nombre == keySearch }, {})[0]
 
             let $box_opened = false
@@ -65,8 +66,11 @@ const site = (function () {
                     $boxs_viewed.add(TARGET_ID)
 
                     const $video_iframe = $box_detail.querySelector('.fnfileDetailIframe')
-                    const DATA_VIDEO_IFRAME = $video_iframe.dataset.src
-                    $video_iframe.src = DATA_VIDEO_IFRAME
+
+                    if ($video_iframe) {
+                        const DATA_VIDEO_IFRAME = $video_iframe.dataset.src
+                        $video_iframe.src = DATA_VIDEO_IFRAME
+                    }
 
                     $box_detail.classList.add(DOM.ACTIVE_CLASS)
                     setTimeout(() => {
@@ -80,9 +84,10 @@ const site = (function () {
             $_closeFileDetail.forEach($button => {
                 $button.addEventListener('click', () => {
                     $box_opened.classList.remove(DOM.SHOW_CLASS)
+                    const $iframe = $box_opened.querySelector('.fnfileDetailIframe')
                     setTimeout(() => {
                         $box_opened.classList.remove(DOM.ACTIVE_CLASS)
-                        $box_opened.querySelector('.fnfileDetailIframe').src = ''
+                        $iframe && ($iframe.src = '')
                         $box_opened = false
                     }, 300)
                 })

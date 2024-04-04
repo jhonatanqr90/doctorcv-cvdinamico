@@ -108,7 +108,14 @@
             width rem(190)
             height rem(220)
             border rem(1) dashed var(--gray-color)
-            
+        
+        &__video
+            width 100%
+            height 100%
+            opacity 0
+            transition opacity ease .25s
+            &.-active-
+                opacity 1            
     
     &__block
         display flex

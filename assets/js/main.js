@@ -53,16 +53,35 @@ const site = (function () {
             $dataDescripcion.innerHTML = universidad.descripcion
             $dataStyle.innerHTML = `:root{--width-logo:${universidad.archivo_width}px;}`
 
+
+            const $fnShowPhotoVideo = document.querySelector('.fnShowPhotoVideo')
+            const $fnShowPhotoVideoTarget = document.querySelector('.fnShowPhotoVideoTarget')
+
+            const showPhotoVideo = (reset = false) => {
+                if ($fnShowPhotoVideoTarget.classList.contains(DOM.ACTIVE_CLASS || reset)) {
+                    $fnShowPhotoVideoTarget.classList.remove(DOM.ACTIVE_CLASS)
+                    $fnShowPhotoVideoTarget.pause()
+                    $fnShowPhotoVideoTarget.currentTime = 0
+                } else {
+                    $fnShowPhotoVideoTarget.classList.add(DOM.ACTIVE_CLASS)
+                    $fnShowPhotoVideoTarget.play()
+                }
+            }
+
+            $fnShowPhotoVideo.addEventListener('click', () => showPhotoVideo())
+
             // Detalle de texto
             $_fnShowFileDetail.forEach($button => {
                 $button.addEventListener('click', (event) => {
+                    event.stopPropagation();
                     const DATA_TARGET = event.target.dataset.target
                     const CONTAINER_TARGET = $button.dataset.target
                     const TARGET_ID = DATA_TARGET ?? CONTAINER_TARGET
                     const $box_detail = document.getElementById(TARGET_ID)
 
-                    if (!$box_detail) return
+                    if (!$box_detail || TARGET_ID == 'foto') return
 
+                    showPhotoVideo(true)
                     $boxs_viewed.add(TARGET_ID)
 
                     const $video_iframe = $box_detail.querySelector('.fnfileDetailIframe')

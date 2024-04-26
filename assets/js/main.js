@@ -1,5 +1,5 @@
 'use strict'
-import data from '../../json/data.json' with { type: "json" }
+import data from '../../json/data.js'
 
 const site = (function () {
 
@@ -26,8 +26,14 @@ const site = (function () {
             const queryString = window.location.search;
             const params = new URLSearchParams(queryString);
             const temporalKey = params.get('universidad') || 'default'
-            const keySearch = organizaciones.includes(temporalKey) ? temporalKey : 'default'
+            let keySearch = 'default'
+            organizaciones.forEach(item => {
+                if (item.nombre == temporalKey) {
+                    keySearch = item.nombre
+                }
+            })
             const universidad = organizaciones.filter(organizacion => { return organizacion.nombre == keySearch }, {})[0]
+
 
             let $box_opened = false
             const $boxs_viewed = new Set([])
@@ -56,15 +62,18 @@ const site = (function () {
 
             const $fnShowPhotoVideo = document.querySelector('.fnShowPhotoVideo')
             const $fnShowPhotoVideoTarget = document.querySelector('.fnShowPhotoVideoTarget')
+            let isVideoplaying = false
 
             const showPhotoVideo = (reset = false) => {
                 if ($fnShowPhotoVideoTarget.classList.contains(DOM.ACTIVE_CLASS || reset)) {
                     $fnShowPhotoVideoTarget.classList.remove(DOM.ACTIVE_CLASS)
                     $fnShowPhotoVideoTarget.pause()
                     $fnShowPhotoVideoTarget.currentTime = 0
+                    isVideoplaying = false
                 } else {
                     $fnShowPhotoVideoTarget.classList.add(DOM.ACTIVE_CLASS)
                     $fnShowPhotoVideoTarget.play()
+                    isVideoplaying = true
                 }
             }
 
@@ -79,10 +88,10 @@ const site = (function () {
                     const TARGET_ID = DATA_TARGET ?? CONTAINER_TARGET
                     const $box_detail = document.getElementById(TARGET_ID)
 
+                    $boxs_viewed.add(TARGET_ID)
                     if (!$box_detail || TARGET_ID == 'foto') return
 
-                    showPhotoVideo(true)
-                    $boxs_viewed.add(TARGET_ID)
+                    isVideoplaying && showPhotoVideo(true)
 
                     const $video_iframe = $box_detail.querySelector('.fnfileDetailIframe')
 
